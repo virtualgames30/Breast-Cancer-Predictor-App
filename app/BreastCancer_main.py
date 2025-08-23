@@ -137,8 +137,8 @@ def scale_the_values(input_dict2): # You can also use sklearn standard scaler to
     
 def make_prediction(user_input):
     # We import the model we have already built so we can use it to make prediction 
-    RF_model = joblib.load('RF.pkl')
-    scaler =  joblib.load('scaler.pkl')
+    RF_model = joblib.load('model\RF.pkl')
+    scaler =  joblib.load('model\scaler.pkl')
 
     # We convert the dictionary output from key&value pairs to an array
     user_input_array = np.array(list(user_input.values())).reshape(1, -1)
